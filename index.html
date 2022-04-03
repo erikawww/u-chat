@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>u chat</title>
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- burger -->
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <!-- estilo propiooO -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- pant. Inicio -->
+    <!-- Pant. Inicio -->
     <section class="inicio screen">
-        <!-- Portada -->
         <div class="portada">
             <div class="gradiente">
                 <img src="img/portada-uchat.png" alt="">
@@ -31,7 +35,7 @@
                 </div>
             </div>
     </section>
-    <!-- pant. ingreso -->
+    <!-- Pant. Ingreso -->
     <section class="ingreso screen">
         <div class="logo">
             <h1>U Chat</h1>
@@ -57,10 +61,11 @@
             <p>Ingresa con Google</p>
         </div>
     </section>
-    <!-- pant. registro -->
+    <!-- Pant. Registro -->
     <section class="registro screen">
         <div class="logo">
             <h1>U Chat</h1>
+            <h2>Crea tu nueva cuenta</h2>
         </div>
         <div class="inputs">
             <input type="text" class="usuario" placeholder="Usuario">
@@ -82,18 +87,52 @@
                 <p>¿Ya tienes cuenta?</p><span id="aIngreso">Ingresa aquí</span>
             </div>
         </div>
-        <!-- <div class="contenedor-google">
-            <img src="assets/google-icon.svg" alt="">
-            <p>Registrate con Google</p>
-        </div> -->
     </section>
-    <!-- <div class="loading"></div>
-    <section class="container-chat">
+    <!-- Pant. Loading -->
+    <div class="loading">
+        <img src="assets/load.svg" alt="cargando chat">
+    </div>
+    <!-- Pant. Chat -->
+    <section class="container-chat" id="chatAction">
         <header>
             <h1>U Chat</h1>
-            <div class="menu"><img src="assets/menu.svg" alt=""></div>
+            <button class="hamburger hamburger--elastic" type="button" aria-label="Menu" aria-controls="navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+            </button>
         </header>
-    </section> -->
+        <nav>
+            <div class="nav-links">
+                <div class="user-data">
+                    <div class="user-photo">
+                        <img src="https://images.unsplash.com/photo-1638991505440-f241c482c5a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8dG93SlpGc2twR2d8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=60" alt="">
+                    </div>
+                    <div class="user-info">
+                        <h3>Pepita Tutuca</h3>
+                        <p>tututcaloca@gmail.com</p>
+                    </div>
+                </div>
+                <ul class="nav-items">
+                    <li>Perfil</li>
+                    <li>Cuenta</li>
+                    <li>Preferencias</li>
+                </ul>
+                <button class="nav-button" id="logOut">Salir<img src="assets/logOut.svg" alt=""></button>
+            </div>
+        </nav>
+        <!-- <div class="chat"> -->
+            <ul class="container-mensajes">
+                <!-- <li>holaaa</li> -->
+            </ul>
+            <div class="container-enviar">
+                <input type="text" placeholder="Escribe algo..." id="mensaje">
+                <button type="button" id="enviar">
+                    <img src="assets/send.svg" alt="enviar mensaje">
+                </button>
+            </div>
+        <!-- </div> -->
+    </section>
     <script src="js/app.js"></script>
 </body>
 </html>
