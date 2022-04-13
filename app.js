@@ -183,7 +183,7 @@ botonclave.addEventListener('click', ()=>{
         // item.appendChild(txt)
         // item.setAttribute('id',msj.fecha)
         // contMjs.appendChild(item)
-        document.getElementById(msj.fecha).scrollIntoView({block: 'end', behavior: "smooth"})
+        document.getElementById(msj.fecha).scrollIntoView({block: 'start', behavior: "smooth"})
     }
 
     let clicks = document.addEventListener('keyup', (e)=>{
@@ -254,14 +254,19 @@ let cargarProfile =()=>{
     
 const desLog = ()=>{
     signOut(auth).then(()=>{
-        nextScreen(inicio)
+    nextScreen(inicio)
+    inicio.style.display="grid"
+
     })
 }
 logOut.addEventListener('click', ()=>{
     desLog()
     navLinks.classList.remove('active-menu')
-    bgcChat.style.backgroundColor="transparent"
     menu.classList.remove('is-active')
+    nextScreen(inicio)
+    inicio.style.display="grid"
+
+
 })
 
 
